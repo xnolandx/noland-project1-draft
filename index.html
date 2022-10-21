@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Currency Converter Site</title>
+        <meta name="description" content="Currency converter with additional features">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="site.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    </head>
+    <body>
+
+        
+        <div>
+            <h4>  
+                <marquee style="background-color: rgba(0, 255, 94, 0.329)">
+                    <div id="ticker"></div>
+                </marquee>
+            </h4>
+        </div>
+
+
+        
+       <div>
+        <h1>Currency Converter: TEAM TRON</h1>
+       </div>
+       <div>
+        <h2>
+            <form>
+                <select name="list" id="list" accesskey="target">
+                    <option value='none' selected>Select an AOR</option>
+                    <option value= "africom.html">AFRICOM</option>
+                    <option value="centcom.html">CENTCOM</option>
+                    <option value="eucom.html">EUCOM</option>
+                    <option value="indopacom.html">INDOPCAOM</option>
+                    <option value="northcom.html">NORTHCOM</option>
+                    <option value="southcom.html">SOUTHCOM</option>
+                </select>
+                <input type=button value="Go" onclick="goToAorPage()" />
+                </form>
+
+
+                <form>
+                    <a href=/historicalChart.html>
+                        <input type=button value="Historical Data" onclick="goToHistPage()" />
+                    </a>   
+                </form>
+        </h2>
+       </div>
+
+        <script type="text/javascript">
+
+            function goToAorPage()
+            {
+                var url = document.getElementById('list').value;
+                if(url != 'none') {
+                    window.location = url;
+                }
+            }
+
+            function goToHistPage()
+            {
+                var url = document.getElementById('histData').value;
+                if(url != 'none') {
+                    window.location = url;
+                }
+            }
+        </script>
+
+    <script type="module" src="./src/index.js" async defer></script>
+
+
+</body>
+
+</html> 
